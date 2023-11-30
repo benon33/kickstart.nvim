@@ -155,10 +155,11 @@ require('lazy').setup({
   {
     -- Theme inspired by Atom
     -- 'navarasu/onedark.nvim',
-    'Mofiqul/dracula.nvim',
+    -- 'Mofiqul/dracula.nvim',
+    'rebelot/kanagawa.nvim',
     priority = 1000,
     config = function()
-      vim.cmd.colorscheme 'dracula'
+      vim.cmd.colorscheme 'kanagawa-wave'
     end,
   },
 
@@ -169,7 +170,7 @@ require('lazy').setup({
     opts = {
       options = {
         icons_enabled = false,
-        theme = 'dracula.nvim',
+        theme = 'onedark',
         component_separators = '|',
         section_separators = '',
       },
