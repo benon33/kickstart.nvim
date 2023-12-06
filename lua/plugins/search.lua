@@ -50,7 +50,7 @@ return {
 
       ts.load_extension("changed_files")
       ts.load_extension("emoji")
-      ts.load_extension("fzf")
+      ts.load_extension("zf-native")
       ts.load_extension("heading")
       ts.load_extension("ui-select")
       ts.load_extension("windows")
@@ -118,8 +118,8 @@ return {
     end
   }, {
   -- FZF SORTER FOR TELESCOPE WRITTEN IN C
-  "nvim-telescope/telescope-fzf-native.nvim",
-  build = "make"
+  -- using ZF-native lua now, the C distribution was giving me ASS
+  "natecraddock/telescope-zf-native.nvim"
 }, {
   -- USE TELESCOPE FOR UI ELEMENTS
   "nvim-telescope/telescope-ui-select.nvim",
