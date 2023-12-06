@@ -1,5 +1,5 @@
 local capabilities = vim.lsp.protocol.make_client_capabilities()
-capabilities.textDocument.publishDiagnostics.tagSupport.valueSet = { 2 }
+-- capabilities.textDocument.publishDiagnostics.tagSupport.valueSet = { 2 }
 
 return {
   {
@@ -95,28 +95,6 @@ return {
       })
     end
   },
-  --  {
-  --
-  --    -- python LSP
-  --    "neovim/nvim-lspconfig",
-  --    config = function()
-  --      require("lspconfig").jedi_language_server.setup({
-  --        capabilities = capabilities,
-  --        on_attach = function(client, bufnr)
-  --          require("shared/lsp")
-  --          require("lsp-inlayhints").setup({
-  --            inlay_hints = { type_hints = { prefix = "=> " } }
-  --          })
-  --          require("lsp-inlayhints").on_attach(client, bufnr)
-  --        end,
-  --        init_options = {
-  --          completion = {
-  --            disableSnippets = false,
-  --          },
-  --        }
-  --      })
-  --    end,
-  --  },
   {
     "neovim/nvim-lspconfig",
     config = function()
@@ -250,9 +228,8 @@ return {
     mason_lspconfig.setup({
       ensure_installed = {
         "bashls", "eslint", "gopls", "jsonls", "marksman",
-        "ruff_lsp",
         "rust_analyzer", "lua_ls", "terraformls", "tflint",
-        "tsserver", "yamlls"
+        "tsserver", "yamlls", "pyright", "ruff_lsp"
       }
     })
 

@@ -16,7 +16,6 @@ return {
         sources = {
           null_ls.builtins.code_actions.shellcheck, -- https://www.shellcheck.net/
           null_ls.builtins.diagnostics.checkmake,   -- https://github.com/mrtazz/checkmake
-          null_ls.builtins.diagnostics.ruff.with({ extra_args = { "--line-length", 100 } }),
           -- DISABLED: Because you can't configure it to only check code comments, so lots of noise in actual code.
           -- null_ls.builtins.diagnostics.codespell,
           -- require("null-ls").builtins.diagnostics.codespell.with({
