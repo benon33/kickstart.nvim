@@ -3,7 +3,8 @@ return {
     -- INDENTATION AUTOPAIRING
     "windwp/nvim-autopairs",
     config = function() require("nvim-autopairs").setup {} end
-  }, {
+  },
+  {
     -- WHITESPACE MANAGEMENT
     "zakharykaplan/nvim-retrail",
     config = function()
